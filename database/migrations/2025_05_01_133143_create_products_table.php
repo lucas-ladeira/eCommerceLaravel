@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('productName');
             $table->string('productDescription');
             $table->double('productPrice');
-            $table->string('productImage')->default('')->change();
+            $table->string('productImage');
             $table->foreignId('category_id')->constrained()->onDelete('cascade');
             $table->timestamps();
         });
